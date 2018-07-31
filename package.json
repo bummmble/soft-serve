@@ -1,0 +1,30 @@
+{
+  "name": "soft-serve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9091 -c .storybook",
+    "chromatic": "node_modules/.bin/chromatic test --app-code=3g311yu1yti"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/core": "^3.4.8",
+    "@storybook/react": "4.0.0-alpha.3",
+    "babel-core": "^6.26.3",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "storybook-chromatic": "^1.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}

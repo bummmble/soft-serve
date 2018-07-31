@@ -1,0 +1,57 @@
+@mixin sButton {
+	display: inline-block;
+	appearance: none;
+	cursor: pointer;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	border: solid 1px transparent;
+	text-align: center;
+	transition: all 350ms ease-in;
+	max-width: 100%;
+	vertical-align: middle;
+
+	&:hover:not(:disabled) {
+		transform: translateY(-1px);
+	}
+	&:hover:not(:disabled), &:focus {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		animation: sButtonActive 350ms ease-in;
+	}
+
+	&:active:not(:disabled) {
+		transform: translateY(1px);
+	}
+}
+
+@mixin sButtonContent($isReverse: false) {
+	height: 100%;
+	width: 100%;
+	vertical-align: middle;
+
+	@if ($isReverse) {
+		flex-direction: row-reverse;
+
+		> * + * {
+			margin-left: 0;
+			margin-right: 12px;
+		}
+	} @else {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		> * + * {
+			margin-left: 12px;
+		}
+	}
+}
+
+@keyframes sButtonActive {
+	50% {
+		transform: translateY(1px);
+	}
+}
